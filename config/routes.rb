@@ -5,5 +5,6 @@ module Bookshelf
     root to: "home.show"
     get "/home/:id", to: "home.show"
     get "/books", to: "books.index"
+    get "/books/:id", to: "books.show"
   end
 end
