@@ -1,0 +1,4 @@
+.env
+log/*
+public/
+node_modules/
