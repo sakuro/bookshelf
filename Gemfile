@@ -43,6 +43,7 @@ gem "rubocop-rspec", "~> 2.27", group: :development
 gem "pg", "~> 1.5"
 gem "rom", "~> 5.3"
 gem "rom-sql", "~> 3.6"
+gem "database_cleaner-sequel", group: :test
 
 gem "foreman", "~> 0.87.2", group: :development
 gem "ruby-lsp", "~> 0.14.5", group: :development
@@ -51,7 +52,6 @@ gem "faker", "~> 3.2", group: :test
 
 gem "debug", "~> 1.9", group: :development
 gem "repl_type_completor", "~> 0.1.0", group: :development
-gem "test", "~> 1.0", group: :development
 
 group :test do
   gem "capybara"
