@@ -1,0 +1,17 @@
+<h1>Bookshelf::Views::Books::New</h1>
+
+<h1>New book</h1>
+
+<%= form_for :book, routes.path(:create_book) do |f| %>
+  <p>
+    <%= f.label "Title", for: :title %>
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label "Author", for: :author %>
+    <%= f.text_field :author %>
+  </p>
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
