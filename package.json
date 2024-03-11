@@ -3,6 +3,10 @@
   "private": true,
   "type": "module",
   "dependencies": {
-    "hanami-assets": "^2.1.0"
+    "hanami-assets": "^2.1.0",
+    "solid-js": "^1.8.15"
+  },
+  "devDependencies": {
+    "esbuild-plugin-solid": "^0.5.0"
   }
 }

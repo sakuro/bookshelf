@@ -1,0 +1,28 @@
+inherit_from:
+  - .rubocop/bundler.yml
+  - .rubocop/gemspec.yml
+  - .rubocop/layout.yml
+  - .rubocop/lint.yml
+  - .rubocop/metrics.yml
+  - .rubocop/naming.yml
+  - .rubocop/performance.yml
+  - .rubocop/rspec.yml
+  - .rubocop/security.yml
+  - .rubocop/style.yml
+  - .rubocop_todo.yml
+
+require:
+  - rubocop-capybara
+  - rubocop-performance
+  - rubocop-rake
+  - rubocop-rspec
+
+AllCops:
+  EnabledByDefault: true
+  TargetRubyVersion: 3.3
+  Exclude:
+    - bin/**/*
+    - vendor/**/*
+    - spec/spec_helper.rb
+    - spec/support/rspec.rb
+    - "*.gemspec"

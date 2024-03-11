@@ -2,3 +2,7 @@
 log/*
 public/
 node_modules/
+.env.local
+.env.*.local
+vendor/bundle/
+spec/examples.txt
