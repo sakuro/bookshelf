@@ -57,3 +57,5 @@ group :test do
   gem "capybara"
   gem "rack-test"
 end
+
+gem "dry-transaction", "~> 0.16.0"
