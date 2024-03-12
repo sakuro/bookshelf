@@ -3,17 +3,8 @@
 
 require "hanami/action"
 
-require "dry/monads"
-
 module Bookshelf
   class Action < Hanami::Action
-    include Dry::Monads[:result]
-
-    def self.inherited(action)
-      action.include Dry::Monads::Do.for(:handle)
-      super
-    end
-
     handle_exception ROM::TupleCountMismatchError => :handle_not_found
 
     private def handle_not_found(_request, response, _exception)
