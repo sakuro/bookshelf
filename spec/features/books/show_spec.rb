@@ -1,4 +1,4 @@
-# spec/features/books/show_spec.rb
+# frozen_string_literal: true
 
 RSpec.feature "Showing a book" do
   let(:books) { Hanami.app["persistence.rom"].relations[:books] }
@@ -18,7 +18,7 @@ RSpec.feature "Showing a book" do
 
   context "when no book matches the given ID" do
     it "returns not found" do
-      visit "/books/#{books.max(:id).to_i + 1}"
+      visit "/books/#{books.max(:id) + 1}"
 
       expect(page.status_code).to eq 404
     end

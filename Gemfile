@@ -40,10 +40,10 @@ gem "rubocop-performance", "~> 1.20", group: :development
 gem "rubocop-rake", "~> 0.6.0", group: :development
 gem "rubocop-rspec", "~> 2.27", group: :development
 
+gem "database_cleaner-sequel", group: :test
 gem "pg", "~> 1.5"
 gem "rom", "~> 5.3"
 gem "rom-sql", "~> 3.6"
-gem "database_cleaner-sequel", group: :test
 
 gem "foreman", "~> 0.87.2", group: :development
 gem "ruby-lsp", "~> 0.14.5", group: :development

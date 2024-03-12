@@ -1,4 +1,4 @@
-# spec/features/books/create_spec.rb
+# frozen_string_literal: true
 
 RSpec.feature "Creating books" do
   it "creates a book when given valid attributes" do
@@ -9,8 +9,8 @@ RSpec.feature "Creating books" do
     click_on "Create"
 
     expect(page).to have_content "Book created"
-    expect(page).to have_selector "h1", text: "Practical Object-Oriented Design in Ruby"
-    expect(page).to have_selector "p", text: "Sandi Metz"
+    expect(page).to have_css "h1", text: "Practical Object-Oriented Design in Ruby"
+    expect(page).to have_css "p", text: "Sandi Metz"
   end
 
   it "shows errors and does not create the book when given invalid attributes" do

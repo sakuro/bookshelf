@@ -10,8 +10,8 @@ module Bookshelf
   class Operation
     include Dry::Monads[:result]
 
-    def self.inherited(op)
-      op.include Dry::Monads::Do.for(:call)
+    def self.inherited(operation)
+      operation.include Dry::Monads::Do.for(:call)
       super
     end
 
