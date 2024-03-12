@@ -1,5 +1,5 @@
 PATH
-  remote: /home/sakuro/github.com/sakuro/cerise-boilerplates
+  remote: ../cerise-boilerplates
   specs:
     cerise-boilerplates (0.1.0)
       hanami-cli (~> 2.1)
