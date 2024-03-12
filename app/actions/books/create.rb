@@ -14,13 +14,20 @@ module Bookshelf
         end
 
         def handle(request, response)
-          if request.params.valid?
-            book = rom.relations[:books].changeset(:create, request.params[:book]).commit
-            response.flash[:notice] = "Book created"
-            response.redirect_to routes.path(:show_book, id: book[:id])
-          else
-            response.flash.now[:alert] = "Could not create book"
+          valid_params = yield valid_params(request.params)
+          book = yield Bookshelf::Operations::Books::Create.call(valid_params[:book])
+          response.flash[:notice] = "Book created"
+          response.redirect_to routes.path(:show_book, id: book[:id])
+        rescue => halt
+          case halt.result
+          in Failure(:invalid_params)
+            puts "invalid params"
           end
+          response.flash.now[:alert] = "Could not create book"
+        end
+
+        def valid_params(params)
+          params.valid? ? Success(params) : Failure(:invalid_params)
         end
       end
     end
