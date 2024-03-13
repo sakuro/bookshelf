@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
 RSpec.feature "Books index" do
-  let(:books) { Hanami.app["persistence.rom"].relations[:books] }
+  let(:book_repo) { Hanami.app["repositories.book_repo"] }
 
   before do
-    books.insert(title: "Practical Object-Oriented Design in Ruby", author: "Sandi Metz")
-    books.insert(title: "Test Driven Development", author: "Kent Beck")
+    book_repo.create(title: "Practical Object-Oriented Design in Ruby", author: "Sandi Metz")
+    book_repo.create(title: "Test Driven Development", author: "Kent Beck")
   end
 
   it "shows a list of books" do

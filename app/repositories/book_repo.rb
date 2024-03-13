@@ -13,12 +13,17 @@ module Bookshelf
         books.by_pk(id).one!
       end
 
-      def all
-        books.to_a
+      def index_page(page:, per_page:)
+        books
+          .select(:title, :author)
+          .order(:title)
+          .page(page)
+          .per_page(per_page)
+          .to_a
       end
 
-      def count
-        books.count
+      def max_id
+        books.max(:id)
       end
     end
   end

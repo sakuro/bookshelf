@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
 RSpec.feature "Books index pagination" do
-  let(:books) { Hanami.app["persistence.rom"].relations[:books] }
+  let(:book_repo) { Hanami.app["repositories.book_repo"] }
 
   before do
     10.times do |n|
-      books.insert(title: "Book #{n}", author: "Author #{n}")
+      book_repo.create(title: "Book #{n}", author: "Author #{n}")
     end
   end
 

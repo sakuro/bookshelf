@@ -4,10 +4,10 @@ module Bookshelf
   module Views
     module Books
       class Show < Bookshelf::View
-        include Deps["persistence.rom"]
+        include Deps["repositories.book_repo"]
 
         expose :book do |id:|
-          rom.relations[:books].by_pk(id).one!
+          book_repo.by_id(id)
         end
       end
     end

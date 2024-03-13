@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
 RSpec.feature "Showing a book" do
-  let(:books) { Hanami.app["persistence.rom"].relations[:books] }
+  let(:book_repo) { Hanami.app["repositories.book_repo"] }
 
   let!(:book_id) do
-    books.insert(title: "Test Driven Development", author: "Kent Beck")
+    book_repo.create(title: "Test Driven Development", author: "Kent Beck").id
   end
 
   context "when a book matches the given ID" do
@@ -18,7 +18,7 @@ RSpec.feature "Showing a book" do
 
   context "when no book matches the given ID" do
     it "returns not found" do
-      visit "/books/#{books.max(:id) + 1}"
+      visit "/books/#{book_repo.max_id + 1}"
 
       expect(page.status_code).to eq 404
     end
