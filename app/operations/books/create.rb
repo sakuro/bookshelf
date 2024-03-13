@@ -4,10 +4,10 @@ module Bookshelf
   module Operations
     module Books
       class Create < Bookshelf::Operation
-        include Deps["persistence.rom"]
+        include Deps["repositories.book_repo"]
 
         def call(params, **)
-          book = rom.relations[:books].changeset(:create, params).commit
+          book = book_repo.create(params)
           Success(book)
         rescue => e
           Failure(e)
