@@ -33,7 +33,6 @@ group :cli, :development, :test do
   gem "hanami-rspec", "~> 2.1"
 end
 
-gem "cerise-boilerplates", "~> 0.1.0", group: :cli, path: "../cerise-boilerplates"
 
 gem "rubocop", "~> 1.62", group: :development
 gem "rubocop-performance", "~> 1.20", group: :development
