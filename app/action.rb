@@ -1,10 +1,14 @@
 # auto_register: false
 # frozen_string_literal: true
 
+require "dry/monads"
+
 require "hanami/action"
 
 module Bookshelf
   class Action < Hanami::Action
+    include Dry::Monads[:result]
+
     handle_exception ROM::TupleCountMismatchError => :handle_not_found
 
     private def handle_not_found(_request, response, _exception)
