@@ -4,7 +4,7 @@ module Bookshelf
   module Actions
     module Books
       class Create < Bookshelf::Action
-        include Deps["persistence.rom"]
+        include Deps[book_repo: "repositories.book_repo"]
 
         params do
           required(:book).hash do
@@ -15,7 +15,7 @@ module Bookshelf
 
         def handle(request, response)
           if request.params.valid?
-            book = rom.relations[:books].changeset(:create, request.params[:book]).commit
+            book = book_repo.create(request.params[:book])
             response.flash[:notice] = "Book created"
             response.redirect_to routes.path(:show_book, id: book[:id])
           else
