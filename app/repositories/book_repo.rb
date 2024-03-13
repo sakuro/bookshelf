@@ -1,12 +1,8 @@
 # frozen_string_literal: true
 
-require "rom-repository"
-
 module Bookshelf
   module Repositories
-    class BookRepo < ROM::Repository[:books]
-      include Deps[container: "persistence.rom"]
-
+    class BookRepo < Bookshelf::Repository[:books]
       commands :create, update: :by_pk, delete: :by_pk
 
       def by_id(id)
