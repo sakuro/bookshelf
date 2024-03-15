@@ -1,12 +1,12 @@
 # auto_register: false
 # frozen_string_literal: true
 
-require "dry/monads"
 require "dry/transaction"
+require "dry/transaction/operation"
 
 module Bookshelf
   class Operation
-    include Dry::Monads[:result]
+    include Dry::Transaction::Operation
     include Dry::Transaction(container: Bookshelf::Container)
 
     # Ensures that #call and #[] function identically
