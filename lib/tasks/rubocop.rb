@@ -30,3 +30,5 @@ module RuboCop
     end
   end
 end
+
+Rake::Task[:default].prerequisites << :rubocop
