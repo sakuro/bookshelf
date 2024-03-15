@@ -5,3 +5,4 @@ require "hanami/rake_tasks"
 require_relative "lib/tasks/environment"
 
 require_relative "lib/tasks/db"
+require_relative "lib/tasks/rubocop"
