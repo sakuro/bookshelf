@@ -4,14 +4,8 @@ module Bookshelf
   module Operations
     module Books
       class Create < Bookshelf::Operation
-        include Deps["repositories.book_repo"]
-
-        def call(params, **)
-          book = book_repo.create(params)
-          Success(book)
-        rescue => e
-          Failure(e)
-        end
+        step :validate, with: "steps.users.validate"
+        step :create, with: "steps.users.create"
       end
     end
   end

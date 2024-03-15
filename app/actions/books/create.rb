@@ -16,7 +16,7 @@ module Bookshelf
         def handle(request, response)
           if request.params.valid?
             case create_book.call(request.params[:book])
-            in Success(book)
+            in Success(book:)
               response.flash[:notice] = "Book created"
               response.redirect_to routes.path(:show_book, id: book[:id])
             in Failure(e)
