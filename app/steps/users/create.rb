@@ -8,7 +8,7 @@ module Bookshelf
 
         def call(input)
           book = book_repo.create(input)
-          Success(book:)
+          Success(book)
         end
       end
     end
