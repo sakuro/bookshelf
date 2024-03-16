@@ -62,8 +62,8 @@ Style/DocumentationMethod:
     - 'app/actions/books/show.rb'
     - 'app/actions/home/show.rb'
     - 'app/repositories/book_repo.rb'
-    - 'app/steps/users/create.rb'
-    - 'app/steps/users/validate.rb'
+    - 'app/steps/books/create.rb'
+    - 'app/steps/books/validate.rb'
     - 'lib/tasks/rubocop.rb'
 
 # Offense count: 2
