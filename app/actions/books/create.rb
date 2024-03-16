@@ -19,7 +19,7 @@ module Bookshelf
             in Success(book)
               response.flash[:notice] = "Book created"
               response.redirect_to routes.path(:show_book, id: book[:id])
-            in Failure(e)
+            in Failure(_e)
               response.flash.now[:alert] = "Could not create book"
             end
           else
