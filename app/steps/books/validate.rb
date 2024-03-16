@@ -5,7 +5,8 @@ module Bookshelf
     module Books
       class Validate < Bookshelf::Step
         def call(input)
-          schema.call(input).to_monad
+          result = schema.call(input)
+          result.success? ? Success(input) : Failure(result.errors)
         end
 
         private def schema

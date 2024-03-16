@@ -7,7 +7,7 @@ module Bookshelf
         include Deps["repositories.book_repo"]
 
         def call(input)
-          book = book_repo.create(input.to_h)
+          book = book_repo.create(input)
           Success(book)
         end
       end
