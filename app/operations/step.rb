@@ -7,7 +7,9 @@ require "dry/schema"
 Dry::Schema.load_extensions(:monads, :hints)
 
 module Bookshelf
-  class Step
-    include Dry::Monads[:result]
+  module Operations
+    class Step
+      include Dry::Monads[:result]
+    end
   end
 end

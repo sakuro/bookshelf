@@ -4,8 +4,8 @@ module Bookshelf
   module Operations
     module Books
       class Create < Bookshelf::Operation
-        step :validate, with: "steps.books.validate"
-        step :create, with: "steps.books.create"
+        step :validate, with: "operations.steps.books.validate"
+        step :create, with: "operations.steps.books.create"
       end
     end
   end
