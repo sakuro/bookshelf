@@ -6,13 +6,13 @@ module Bookshelf
       class Validate < Bookshelf::Step
         def call(input)
           result = schema.call(input)
-          result.success? ? Success(input) : Failure(result.errors)
+          result.success? ? Success(input) : Failure(invalid: result)
         end
 
         private def schema
           Dry::Schema.Params do
-            required(:title).filled(:string, min_size?: 1)
-            required(:author).filled(:string, min_size?: 1)
+            required(:title).filled(:string, min_size?: 3)
+            required(:author).filled(:string, min_size?: 3, format?: /\A[A-Z][a-z]+/)
           end
         end
       end

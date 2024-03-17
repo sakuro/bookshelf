@@ -6,10 +6,12 @@
   <p>
     <%= f.label "Title", for: :title %>
     <%= f.text_field :title %>
+    <%= errors.list(:title) if errors.has?(:title) %>
   </p>
   <p>
     <%= f.label "Author", for: :author %>
     <%= f.text_field :author %>
+    <%= errors.list(:author) if errors.has?(:author) %>
   </p>
   <p>
     <%= f.submit "Create" %>

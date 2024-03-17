@@ -4,7 +4,7 @@
 require "dry/monads"
 require "dry/schema"
 
-Dry::Schema.load_extensions(:monads)
+Dry::Schema.load_extensions(:monads, :hints)
 
 module Bookshelf
   class Step
