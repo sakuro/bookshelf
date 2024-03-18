@@ -1,8 +1,9 @@
 # frozen_string_literal: true
 
 RSpec.describe Bookshelf::Actions::Books::Create do
+  subject(:action) { Bookshelf::Actions::Books::Create.new }
+
   context "when given both title and author" do
-    subjecxt(:action) { described_class.new }
     let(:params) { Hash[book: {title: "The Murders in the Rue Morgue", author: "Edgar Allan Poe"}] }
 
     it "succeeds" do
