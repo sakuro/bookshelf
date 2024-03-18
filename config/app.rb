@@ -2,6 +2,8 @@
 
 require "hanami"
 
+require "locale/middleware"
+
 module Bookshelf
   class App < Hanami::App
     config.actions.sessions = :cookie, {
@@ -10,5 +12,7 @@ module Bookshelf
       same_site: "Lax",
       secret: settings.session_secret
     }
+
+    config.middleware.use Locale::Middleware
   end
 end

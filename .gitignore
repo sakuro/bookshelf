@@ -6,3 +6,7 @@ node_modules/
 .env.*.local
 vendor/bundle/
 spec/examples.txt
+po/*.pot
+po/*/*.edit.po
+po/*/*.po.time_stamp
+locale/**/*.mo
