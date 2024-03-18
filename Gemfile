@@ -59,4 +59,5 @@ end
 gem "dry-transaction", "~> 0.16.0"
 
 gem "gettext", "~> 3.4"
-gem "locale", github: "sakuro/locale", branch: "drop-empty-lang-from-query-or-cookie"
+
+gem "locale", "~> 2.1"
