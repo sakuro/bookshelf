@@ -2,10 +2,11 @@
 
 RSpec.describe Bookshelf::Actions::Books::Create do
   context "when given both title and author" do
+    subjecxt(:action) { described_class.new }
     let(:params) { Hash[book: {title: "The Murders in the Rue Morgue", author: "Edgar Allan Poe"}] }
 
     it "succeeds" do
-      response = subject.call(params)
+      response = action.call(params)
       expect(response).to be_redirect
     end
   end
@@ -14,7 +15,7 @@ RSpec.describe Bookshelf::Actions::Books::Create do
     let(:params) { Hash[book: {author: "Edgar Allan Poe"}] }
 
     it "fails" do
-      response = subject.call(params)
+      response = action.call(params)
       expect(response).to be_bad_request
     end
   end
@@ -23,7 +24,7 @@ RSpec.describe Bookshelf::Actions::Books::Create do
     let(:params) { Hash[book: {title: "The Murders in the Rue Morgue"}] }
 
     it "fails" do
-      response = subject.call(params)
+      response = action.call(params)
       expect(response).to be_bad_request
     end
   end
