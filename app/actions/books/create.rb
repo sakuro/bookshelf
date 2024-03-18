@@ -8,12 +8,13 @@ module Bookshelf
 
         params do
           required(:book).hash do
-            required(:title).filled(:string)
-            required(:author).filled(:string)
+            required(:title)
+            required(:author)
           end
         end
 
         def handle(request, response)
+          halt 400 unless request.params.valid?
           case create_book.call(request.params[:book])
           in Success(book)
             response.flash[:notice] = "Book created"
