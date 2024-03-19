@@ -15,6 +15,7 @@
       <p><%= flash[:notice] %></p>
     <% end %>
     <%= yield %>
+    <div id="root"></div>
     <%= javascript_tag "app" %>
   </body>
 </html>
