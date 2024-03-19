@@ -26,6 +26,12 @@ msgstr "Booを作成できませんでした"
 msgid "Server error occured"
 msgstr "サーバーエラーが発生しました"
 
+msgid "List"
+msgstr "一覧"
+
+msgid "New"
+msgstr "新規"
+
 msgid "Title"
 msgstr "タイトル"
 
@@ -34,6 +40,3 @@ msgstr "著者"
 
 msgid "Create"
 msgstr "作成"
-
-msgid "List"
-msgstr "一覧"

@@ -4,7 +4,9 @@
 module Bookshelf
   module Views
     module Helpers
-      # Add your view helpers here
+      def current_path?(path)
+        _context.current_path?(path)
+      end
     end
   end
 end

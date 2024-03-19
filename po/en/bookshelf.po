@@ -26,6 +26,12 @@ msgstr ""
 msgid "Server error occured"
 msgstr ""
 
+msgid "List"
+msgstr ""
+
+msgid "New"
+msgstr ""
+
 msgid "Title"
 msgstr ""
 
@@ -33,7 +39,4 @@ msgid "Author"
 msgstr ""
 
 msgid "Create"
-msgstr ""
-
-msgid "List"
 msgstr ""

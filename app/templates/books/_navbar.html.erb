@@ -1,0 +1,18 @@
+<section class="section">
+  <div class="navbar">
+    <div class="navbar-menu">
+      <div class="navbar-start">
+        <% if current_path?(routes.path(:list_books)) %>
+          <%= tag.div(class: "navbar-item") { _("List") } %>
+        <% else %>
+          <%= link_to _("List"), routes.path(:list_books), class: "navbar-item" %>
+        <% end %>
+        <% if current_path?(routes.path(:new_book)) %>
+          <%= tag.div(class: "navbar-item") { _("New") } %>
+        <% else %>
+          <%= link_to _("New"), routes.path(:new_book), class: "navbar-item" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>

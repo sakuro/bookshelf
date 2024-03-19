@@ -6,7 +6,7 @@ module Bookshelf
     get "/home/:id", to: "home.show"
     get "/books", to: "books.index", as: :list_books
     get "/books/:id", to: "books.show", as: :show_book
-    get "/books/new", to: "books.new"
+    get "/books/new", to: "books.new", as: :new_book
     post "/books", to: "books.create", as: :create_book
   end
 end
