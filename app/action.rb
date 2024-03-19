@@ -2,12 +2,14 @@
 # frozen_string_literal: true
 
 require "dry/monads"
+require "gettext"
 
 require "hanami/action"
 
 module Bookshelf
   class Action < Hanami::Action
     include Dry::Monads[:result]
+    include GetText
 
     handle_exception ROM::TupleCountMismatchError => :handle_not_found
 
