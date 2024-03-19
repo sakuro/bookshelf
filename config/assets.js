@@ -4,7 +4,12 @@ import { sassPlugin } from "esbuild-sass-plugin";
 
 await assets.run({
   esbuildOptionsFn: (_args, esbuildOptions) => {
-    const plugins = [...esbuildOptions.plugins, solidPlugin(), sassPlugin()];
+    const plugins = [
+      ...esbuildOptions.plugins,
+      solidPlugin(),
+      sassPlugin({embedded: true})
+    ];
+
     return {
       ...esbuildOptions,
       plugins
