@@ -12,8 +12,8 @@ module Bookshelf
 
           private def schema
             Dry::Schema.Params do
-              required(:title).filled(:string, min_size?: 3)
-              required(:author).filled(:string, min_size?: 3, format?: /\A[A-Z][a-z]+/)
+              required(:title).filled(:string, min_size?: 2)
+              required(:author).filled(:string, min_size?: 3)
             end
           end
         end

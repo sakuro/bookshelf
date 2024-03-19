@@ -17,6 +17,15 @@ msgstr ""
 "Plural-Forms: nplurals=; plural=;\n"
 "\n"
 
+msgid "Book created"
+msgstr ""
+
+msgid "Could not create book"
+msgstr ""
+
+msgid "Server error occured"
+msgstr ""
+
 msgid "Title"
 msgstr ""
 
@@ -24,4 +33,7 @@ msgid "Author"
 msgstr ""
 
 msgid "Create"
+msgstr ""
+
+msgid "List"
 msgstr ""
