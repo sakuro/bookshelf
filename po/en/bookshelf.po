@@ -17,9 +17,6 @@ msgstr ""
 "Plural-Forms: nplurals=; plural=;\n"
 "\n"
 
-msgid "Errors:"
-msgstr ""
-
 msgid "Title"
 msgstr ""
 
