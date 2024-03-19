@@ -1,19 +1,31 @@
-<h1>Bookshelf::Views::Books::New</h1>
+<section class="section">
+  <h1 clas="title">Bookshelf::Views::Books::New</h1>
 
-<h1>New book</h1>
+  <h2 class="subtitle">New book</h2>
 
-<%= form_for :book, routes.path(:create_book) do |f| %>
-  <p>
-    <%= f.label _("Title"), for: :title %>
-    <%= f.text_field :title %>
-    <%= errors.list(:title) if errors.has?(:title) %>
-  </p>
-  <p>
-    <%= f.label _("Author"), for: :author %>
-    <%= f.text_field :author %>
-    <%= errors.list(:author) if errors.has?(:author) %>
-  </p>
-  <p>
-    <%= f.submit _("Create") %>
-  </p>
-<% end %>
+  <div class="columns">
+    <div class="column">
+      <%= form_for :book, routes.path(:create_book), class: "box" do |f| %>
+        <div class="field">
+          <%= f.label _("Title"), for: :title, class: "label" %>
+          <div class="control">
+            <%= f.text_field :title, class: "input" %>
+          </div>
+          <%= errors[:title] %>
+        </div>
+        <div class="field">
+          <%= f.label _("Author"), for: :author, class: "label" %>
+          <div class="control">
+          <%= f.text_field :author, class: "input" %>
+          </div>
+          <%= errors[:author] %>
+        </div>
+        <div class="field">
+          <div class="control">
+            <%= f.submit _("Create"), class: "button is-link"%>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>

@@ -8,12 +8,20 @@
     <%= stylesheet_tag "app" %>
   </head>
   <body>
-    <% if flash[:alert] %>
-      <p><%= flash[:alert] %></p>
-    <% end %>
-    <% if flash[:notice] %>
-      <p><%= flash[:notice] %></p>
-    <% end %>
+    <section class="section">
+      <% if flash[:alert] %>
+        <div class="notification is-danger">
+          <button class="delete"></button>
+          <%= flash[:alert] %>
+        </div>
+      <% end %>
+      <% if flash[:notice] %>
+        <div class="notification is-success">
+          <button class="delete"></button>
+          <%= flash[:notice] %>
+        </div>
+      <% end %>
+    </section>
     <%= yield %>
     <div id="root"></div>
     <%= javascript_tag "app" %>
