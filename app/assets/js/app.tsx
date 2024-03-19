@@ -1,4 +1,4 @@
-import "../css/app.css";
+import "../css/app.scss";
 import { render } from "solid-js/web";
 import Root from "./Root";
 
