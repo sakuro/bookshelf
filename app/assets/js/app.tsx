@@ -1,14 +1,25 @@
 import "../css/app.scss";
-import { render } from "solid-js/web";
-import Root from "./Root";
 
 document.addEventListener("DOMContentLoaded", () => {
-  render(() => <Root/>, document.getElementById("root"));
-
-  (document.querySelectorAll(".notification .delete") || []).forEach((del: HTMLElement) => {
-    const notification = del.parentNode;
+  document.querySelectorAll<HTMLElement>(".notification .delete").forEach((del) => {
     del.addEventListener("click", () => {
-      notification.parentNode.removeChild(notification);
+      const notification = del.parentNode;
+      const section = notification.parentNode;
+      section.removeChild(notification);
+      const remainingNotifications = section.querySelectorAll<HTMLElement>(".notification");
+      if (remainingNotifications.length == 0) {
+        section.parentNode.removeChild(section);
+      }
     })
+  });
+
+  const burgers = document.querySelectorAll<HTMLElement>(".navbar-burger");
+  burgers.forEach((burger) => {
+    burger.addEventListener("click", () => {
+      const target = document.getElementById(burger.dataset.target);
+      console.log({target});
+      burger.classList.toggle("is-active");
+      target.classList.toggle("is-active");
+    });
   });
 });
