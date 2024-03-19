@@ -15,6 +15,7 @@ module Bookshelf
 
         def handle(request, response)
           halt 400 unless request.params.valid?
+
           case create_book.call(request.params[:book])
           in Success(book)
             response.flash[:notice] = _("Book created")
