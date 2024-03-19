@@ -11,7 +11,9 @@ RSpec.feature "Books index" do
   it "shows a list of books" do
     visit "/books"
 
-    expect(page).to have_css "li", text: "Test Driven Development, by Kent Beck"
-    expect(page).to have_css "li", text: "Practical Object-Oriented Design in Ruby, by Sandi Metz"
+    expect(page).to have_css "tbody tr td", text: "Test Driven Development"
+    expect(page).to have_css "tbody tr td", text: "Kent Beck"
+    expect(page).to have_css "tbody tr td", text: "Practical Object-Oriented Design in Ruby"
+    expect(page).to have_css "tbody tr td", text: "Sandi Metz"
   end
 end

@@ -12,9 +12,12 @@ RSpec.feature "Books index pagination" do
   it "returns the correct page of books" do
     visit "/books?page=1&per_page=3"
 
-    expect(page).to have_css "li", count: 3
-    expect(page.find("li:nth-child(1)")).to have_content "Book 0, by Author 0"
-    expect(page.find("li:nth-child(2)")).to have_content "Book 1, by Author 1"
-    expect(page.find("li:nth-child(3)")).to have_content "Book 2, by Author 2"
+    expect(page).to have_css "tbody tr", count: 3
+    expect(page.find("tbody tr:nth-child(1) td:nth-child(1)")).to have_content "Book 0"
+    expect(page.find("tbody tr:nth-child(1) td:nth-child(2)")).to have_content "Author 0"
+    expect(page.find("tbody tr:nth-child(2) td:nth-child(1)")).to have_content "Book 1"
+    expect(page.find("tbody tr:nth-child(2) td:nth-child(2)")).to have_content "Author 1"
+    expect(page.find("tbody tr:nth-child(3) td:nth-child(1)")).to have_content "Book 2"
+    expect(page.find("tbody tr:nth-child(3) td:nth-child(2)")).to have_content "Author 2"
   end
 end

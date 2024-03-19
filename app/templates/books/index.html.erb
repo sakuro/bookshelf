@@ -1,9 +1,25 @@
 <%= render "books/navbar" %>
 
-<h1>Books</h1>
+<section class="section">
+  <h1 class="title is-1">Bookshelf::Views::Books::Index</h1>
+  <h2 class="subtitle is-3">Books</h2>
 
-<ul>
-  <% books.each do |book| %>
-    <li><%= book[:title] %>, by <%= book[:author] %></li>
-  <% end %>
-</ul>
+  <div class="columns">
+    <div class="column">
+      <table class="table is-fullwidth is-hoverable">
+        <thead>
+          <tr>
+            <th><%= _("Title") %></th><th><%= _("Author") %></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% books.each do |book| %>
+            <tr>
+              <td><%= book[:title] %></td><td><%= book[:author] %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
