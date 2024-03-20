@@ -61,3 +61,7 @@ gem "dry-transaction", "~> 0.16.0"
 gem "gettext", "~> 3.4"
 
 gem "locale", "~> 2.1"
+
+gem "bcrypt", "~> 3.1"
+
+gem "rack_session_access", "~> 0.2.0", :group => :test
