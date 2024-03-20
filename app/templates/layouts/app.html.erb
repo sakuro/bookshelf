@@ -8,9 +8,9 @@
     <%= stylesheet_tag "app" %>
   </head>
   <body>
+    <%= render "navbar" %>
     <%= render "notifications" %>
     <%= yield %>
-    <div id="root"></div>
     <%= javascript_tag "app" %>
   </body>
 </html>

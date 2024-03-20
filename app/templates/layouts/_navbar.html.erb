@@ -1,0 +1,22 @@
+<section class="section">
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <%= link_to "/", class: "navbar-item" do %>
+        <img src="https://hanamirb.org/images/logo.png" width="16" height="16" alt="Hanami">
+      <% end %>
+      <a class="navbar-burger" data-target="navbar-menu" aria-label="menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+    </div>
+    <div id="navbar-menu" class="navbar-menu">
+      <div class="navbar-start">
+        <%= context.content_for("navbar-start") %>
+      </div>
+      <div class="navbar-end">
+        <%= context.content_for("navbar-end") %>
+      </div>
+    </div>
+  </nav>
+</section>

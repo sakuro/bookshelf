@@ -1,4 +1,7 @@
-<%= render "books/navbar" %>
+<%= content_for "navbar-start" do %>
+  <%= tag.div(class: "navbar-item") { _("List") } %>
+  <%= link_to _("New"), routes.path(:new_book), class: "navbar-item is-tab" %>
+<% end %>
 
 <section class="section">
   <h1 class="title is-1">Bookshelf::Views::Books::Index</h1>
