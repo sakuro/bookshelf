@@ -11,6 +11,8 @@ module Bookshelf
     include Dry::Monads[:result]
     include GetText
 
+    bindtextdomain(Hanami.app.app_name.name)
+
     handle_exception ROM::TupleCountMismatchError => :handle_not_found
 
     private def handle_not_found(_request, response, _exception)
