@@ -40,3 +40,9 @@ msgstr "著者"
 
 msgid "Create"
 msgstr "作成"
+
+msgid "Sign up"
+msgstr "新規登録"
+
+msgid "Sign in"
+msgstr "サインイン"

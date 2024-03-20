@@ -7,7 +7,7 @@ ROM::SQL.migration do
       foreign_key :account_id, :accounts
       column :type, :text, null: false
       column :data, :json, null: false
-      unique [:account_id, :type]
+      unique %i[account_id type]
     end
   end
 end

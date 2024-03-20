@@ -1,0 +1,35 @@
+<%= content_for "navbar-start" do %>
+  <%= link_to _("List"), routes.path(:list_books), class: "navbar-item is-tab" %>
+  <%= link_to _("New"), routes.path(:new_book), class: "navbar-item is-tab" %>
+<% end %>
+
+<section class="section">
+  <h1 class="title is-1">Bookshelf::Views::Sessions::New</h1>
+  <h2 class="subtitle is-3">New session</h2>
+
+  <div class="columns">
+    <div class="column">
+      <%= form_for :account, routes.path(:create_session), class: "box" do |f| %>
+        <div class="field">
+          <%= f.label _("Id:"), for: :identifier, class: "label" %>
+          <div class="control">
+            <%= f.text_field :identifier, class: "input" %>
+          </div>
+          <%= errors[:identifier] %>
+        </div>
+        <div class="field">
+          <%= f.label _("Password:"), for: :password, class: "label" %>
+          <div class="control">
+            <%= f.text_field :password, class: "input" %>
+          </div>
+          <%= errors[:password] %>
+        </div>
+        <div class="field">
+          <div class="control">
+            <%= f.submit _("Sign in"), class: "button is-link"%>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>

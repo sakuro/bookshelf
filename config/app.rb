@@ -14,5 +14,10 @@ module Bookshelf
     }
 
     config.middleware.use Locale::Middleware
+
+    environment(:test) do
+      require "rack_session_access"
+      config.middleware.use RackSessionAccess::Middleware
+    end
   end
 end

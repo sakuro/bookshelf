@@ -40,3 +40,9 @@ msgstr ""
 
 msgid "Create"
 msgstr ""
+
+msgid "Sign up"
+msgstr ""
+
+msgid "Sign in"
+msgstr ""
