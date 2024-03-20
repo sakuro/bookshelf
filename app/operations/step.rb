@@ -4,7 +4,7 @@
 require "dry/monads"
 require "dry/schema"
 
-Dry::Schema.load_extensions(:monads, :hints)
+Dry::Schema.load_extensions(:monads)
 
 module Bookshelf
   module Operations

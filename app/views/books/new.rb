@@ -7,10 +7,6 @@ module Bookshelf
         expose(:errors) do |result: nil|
           result.nil? ? [] : result.errors.to_a
         end
-
-        expose(:hints) do |result: nil|
-          result.nil? ? [] : result.hints.to_a
-        end
       end
     end
   end
