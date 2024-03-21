@@ -15,10 +15,9 @@ module Bookshelf
       import Dry::Transformer::Recursion
     end
 
-    T = Transforms
-    private_constant :T
+    private_class_method def self.t(*) = Transforms[*]
 
-    RecursivelySymbolizeKeys = T[:hash_recursion, T[:symbolize_keys]]
+    RecursivelySymbolizeKeys = t(:hash_recursion, t(:symbolize_keys))
     public_constant :RecursivelySymbolizeKeys
   end
 end
