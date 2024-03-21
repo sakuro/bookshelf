@@ -1,13 +1,9 @@
 # frozen_string_literal: true
 
-require "bcrypt"
-
 RSpec.feature "Sign in" do
-  let(:account_repo) { Hanami.app["repositories.account_repo"] }
-  let(:identifier) { Faker::Internet.username(separators: %w[. _ -]) }
-  let(:raw_password) { Faker::Internet.password }
-  let(:encrypted_password) { BCrypt::Password.create(raw_password).to_s }
-  let(:account) { account_repo.create_with_encrypted_password(identifier, encrypted_password) }
+  given(:raw_password) { Faker::Internet.password }
+  given(:credential) { Factory[:credential, data: credential_data(raw_password:)] }
+  given(:account) { credential.account }
 
   scenario "signs in with identifier/password valid/valid" do
     visit "/sign_in"
