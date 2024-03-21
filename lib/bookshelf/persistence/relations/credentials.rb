@@ -7,7 +7,7 @@ module Bookshelf
         schema(:credentials, infer: true) do
           attribute :data,
             ROM::SQL::Postgres::Types::JSONB,
-            read: ROM::SQL::Postgres::Types::JSONB.constructor(->(value) { Types::RecursivelySymbolizeKeys[value.to_h] })
+            read: ROM::SQL::Postgres::Types::JSONB.constructor(:to_h.to_proc >> Types::RecursivelySymbolizeKeys)
           associations do
             belongs_to :account
           end
