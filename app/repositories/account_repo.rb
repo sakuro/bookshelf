@@ -26,7 +26,9 @@ module Bookshelf
           identifier:,
           credentials: [{type: "password", data: {algorithm:, encrypted_password:}}]
         }
-        accounts.combine(:credentials).command(:create).call(params)
+        accounts.transaction do
+          accounts.combine(:credentials).command(:create).call(params)
+        end
       end
     end
   end
