@@ -11,6 +11,10 @@ inherit_from:
   - .rubocop/style.yml
   - .rubocop_todo.yml
 
+inherit_mode:
+  merge:
+    - Exclude
+
 require:
   - rubocop-capybara
   - rubocop-factory_bot
