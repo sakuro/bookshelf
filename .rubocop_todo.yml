@@ -131,3 +131,9 @@ Style/EmptyMethod:
 Style/GuardClause:
   Exclude:
     - 'app/actions/home/show.rb'
+
+# This cop supports safe autocorrection (--autocorrect).
+# Configuration parameters: AllowHeredoc, AllowURI, URISchemes, IgnoreCopDirectives, AllowedPatterns.
+# URISchemes: http, https
+Layout/LineLength:
+  Max: 124
