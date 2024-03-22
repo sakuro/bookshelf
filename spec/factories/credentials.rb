@@ -7,8 +7,8 @@ Factory.define(:credential) do |f|
   f.type "password"
   f.data do
     raw_password = fake(:internet, :password)
-    encrypted_password = BCrypt::Password.create(raw_password).to_s
+    password_digest = BCrypt::Password.create(raw_password).to_s
 
-    {algorithm: "bcrypt", encrypted_password:}
+    {algorithm: "bcrypt", password_digest:}
   end
 end

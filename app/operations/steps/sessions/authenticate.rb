@@ -20,7 +20,7 @@ module Bookshelf
 
           private def find_matching_credential(credentials, password)
             credentials.find {|cred|
-              BCrypt::Password.new(cred.data[:encrypted_password]) == password
+              BCrypt::Password.new(cred.data[:password_digest]) == password
             }
           end
         end

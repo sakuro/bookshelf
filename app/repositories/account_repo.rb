@@ -21,10 +21,10 @@ module Bookshelf
         accounts.combine(:credentials).where(identifier:).one!
       end
 
-      def create_with_encrypted_password(identifier, encrypted_password, algorithm: "bcrypt")
+      def create_with_password_digest(identifier, password_digest, algorithm: "bcrypt")
         params = {
           identifier:,
-          credentials: [{type: "password", data: {algorithm:, encrypted_password:}}]
+          credentials: [{type: "password", data: {algorithm:, password_digest:}}]
         }
         accounts.transaction do
           accounts.combine(:credentials).command(:create).call(params)
