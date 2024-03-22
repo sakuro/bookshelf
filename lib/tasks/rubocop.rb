@@ -24,11 +24,19 @@ module RuboCop
     prepend AddRegenerateToDo
 
     new(:rubocop) do |task|
-      task.options = %w[--display-cop-names --display-style-guide --extra-details]
+      task.options = %w[
+        --display-cop-names
+        --display-style-guide
+        --exclude-limit=99999
+        --extra-details
+        --no-auto-gen-timestamp
+        --no-offense-counts
+      ]
       # Use Rubocop's Github Actions formatter if possible
       task.formatters << "github" if ENV["GITHUB_ACTIONS"] == "true"
     end
   end
 end
+
 
 Rake::Task[:default].prerequisites << :rubocop
