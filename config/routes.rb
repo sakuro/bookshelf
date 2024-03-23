@@ -14,6 +14,8 @@ module Bookshelf
     get "/sign_in", to: "sessions.new", as: :sign_in
     post "/sign_in", to: "sessions.create", as: :create_session
 
+    get "/sign_out", to: "sessions.destroy", as: :sign_out
+
     get "/accounts/new", to: "accounts.new", as: :new_account
     post "/accounts", to: "accounts.create", as: :create_account
     get "/accounts/:identifier", to: "accounts.show", as: :show_account

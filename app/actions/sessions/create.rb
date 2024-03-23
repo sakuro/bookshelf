@@ -17,6 +17,7 @@ module Bookshelf
           halt 400 unless request.params.valid?
 
           result = create_session.call(request.params[:account])
+
           case result
           in Success(account)
             response.session[:account_id] = account.id

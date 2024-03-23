@@ -9,6 +9,7 @@ require "hanami/action"
 module Bookshelf
   class Action < Hanami::Action
     include Dry::Monads[:result]
+    include Deps["logger"]
     include GetText
 
     bindtextdomain(Hanami.app.app_name.name)

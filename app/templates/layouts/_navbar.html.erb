@@ -1,22 +1,28 @@
-<section class="section">
-  <nav class="navbar" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <%= link_to "/", class: "navbar-item" do %>
-        <img src="https://hanamirb.org/images/logo.png" width="16" height="16" alt="Hanami">
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <%= link_to "/", class: "navbar-item" do %>
+      <img src="https://hanamirb.org/images/logo.png" width="16" height="16" alt="Hanami">
+    <% end %>
+    <a class="navbar-burger" data-target="navbar-menu" aria-label="menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </a>
+  </div>
+  <div id="navbar-menu" class="navbar-menu">
+    <div class="navbar-start">
+      <%= context.content_for("navbar-start") %>
+    </div>
+    <div class="navbar-end">
+      <% if current_account? %>
+        <div class="navbar-item">
+          <%= current_account %>
+        </div>
+        <%= link_to _("Sign out"), routes.path(:sign_out), class: "navbar-item is-tab" %>
+      <% else %>
+        <%= link_to _("Sign up"), routes.path(:sign_up), class: "navbar-item is-tab" %>
+        <%= link_to _("Sign in"), routes.path(:sign_in), class: "navbar-item is-tab" %>
       <% end %>
-      <a class="navbar-burger" data-target="navbar-menu" aria-label="menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </a>
     </div>
-    <div id="navbar-menu" class="navbar-menu">
-      <div class="navbar-start">
-        <%= context.content_for("navbar-start") %>
-      </div>
-      <div class="navbar-end">
-        <%= context.content_for("navbar-end") %>
-      </div>
-    </div>
-  </nav>
-</section>
+  </div>
+</nav>

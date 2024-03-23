@@ -19,7 +19,7 @@ Layout/EmptyLines:
 
 # Configuration parameters: AllowedMethods, AllowedPatterns, CountRepeatedAttributes.
 Metrics/AbcSize:
-  Max: 25
+  Max: 26
 
 # Configuration parameters: CountComments, CountAsOne, AllowedMethods, AllowedPatterns.
 Metrics/MethodLength:
@@ -27,7 +27,7 @@ Metrics/MethodLength:
 
 # Configuration parameters: CountAsOne.
 RSpec/ExampleLength:
-  Max: 8
+  Max: 9
 
 RSpec/MultipleExpectations:
   Max: 7
@@ -56,6 +56,7 @@ Style/Documentation:
     - 'app/actions/books/show.rb'
     - 'app/actions/home/show.rb'
     - 'app/actions/sessions/create.rb'
+    - 'app/actions/sessions/destroy.rb'
     - 'app/actions/sessions/new.rb'
     - 'app/operation.rb'
     - 'app/operations/accounts/create.rb'
@@ -81,6 +82,7 @@ Style/Documentation:
     - 'app/views/books/show.rb'
     - 'app/views/context.rb'
     - 'app/views/helpers.rb'
+    - 'app/views/parts/account.rb'
     - 'app/views/parts/error.rb'
     - 'app/views/parts/errors.rb'
     - 'app/views/scope.rb'
@@ -106,6 +108,7 @@ Style/DocumentationMethod:
     - 'app/actions/books/show.rb'
     - 'app/actions/home/show.rb'
     - 'app/actions/sessions/create.rb'
+    - 'app/actions/sessions/destroy.rb'
     - 'app/actions/sessions/new.rb'
     - 'app/operations/step.rb'
     - 'app/operations/steps/accounts/create.rb'
@@ -120,6 +123,7 @@ Style/DocumentationMethod:
     - 'app/repositories/credential_repo.rb'
     - 'app/views/context.rb'
     - 'app/views/helpers.rb'
+    - 'app/views/parts/account.rb'
     - 'app/views/parts/error.rb'
     - 'app/views/parts/errors.rb'
     - 'lib/bookshelf/persistence/relations/accounts.rb'

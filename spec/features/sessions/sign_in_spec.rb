@@ -10,7 +10,9 @@ RSpec.feature "Sign in" do
 
     fill_in "Id:", with: account.identifier
     fill_in "Password:", with: raw_password
-    click_on "Sign in"
+    within("form") do
+      click_on "Sign in"
+    end
 
     expect(page).to have_current_path "/accounts/#{account.identifier}"
     expect(page).to have_content "Bookshelf::Views::Accounts::Show"
@@ -21,7 +23,9 @@ RSpec.feature "Sign in" do
 
     fill_in "Id:", with: account.identifier
     fill_in "Password:", with: ">#{+raw_password}<"
-    click_on "Sign in"
+    within("form") do
+      click_on "Sign in"
+    end
 
     expect(page).to have_content "Sign in failed"
     expect(page).to have_content "Bookshelf::Views::Sessions::New"
@@ -35,7 +39,9 @@ RSpec.feature "Sign in" do
 
     fill_in "Id:", with: "a#{account.identifier}z"
     fill_in "Password:", with: raw_password
-    click_on "Sign in"
+    within("form") do
+      click_on "Sign in"
+    end
 
     expect(page).to have_content "Sign in failed"
     expect(page).to have_content "Bookshelf::Views::Sessions::New"

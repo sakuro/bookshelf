@@ -17,14 +17,41 @@ msgstr ""
 "Plural-Forms: nplurals=; plural=;\n"
 "\n"
 
+msgid "Account %<identifier>s has been created."
+msgstr "アカウント %<identifier>s を作成しました。"
+
+msgid "Could not create an account."
+msgstr "アカウントが作成できませんでした。"
+
 msgid "Book created"
-msgstr "Booを作成しました"
+msgstr "Bookを作成しました"
 
 msgid "Could not create book"
-msgstr "Booを作成できませんでした"
+msgstr "Bookを作成できませんでした"
 
 msgid "Server error occured"
 msgstr "サーバーエラーが発生しました"
+
+msgid "Signed in"
+msgstr "サインイン"
+
+msgid "Sign in failed"
+msgstr "サインインに失敗しました。"
+
+msgid "Signed out"
+msgstr "サインアウトしました。"
+
+msgid "ID:"
+msgstr "ID:"
+
+msgid "Password:"
+msgstr "パスワード:"
+
+msgid "Password (confirm):"
+msgstr "パスワード (確認)"
+
+msgid "Register"
+msgstr "登録"
 
 msgid "List"
 msgstr "一覧"
@@ -41,8 +68,14 @@ msgstr "著者"
 msgid "Create"
 msgstr "作成"
 
+msgid "Sign out"
+msgstr "サインアウト"
+
 msgid "Sign up"
 msgstr "新規登録"
 
 msgid "Sign in"
 msgstr "サインイン"
+
+msgid "Id:"
+msgstr "Id:"

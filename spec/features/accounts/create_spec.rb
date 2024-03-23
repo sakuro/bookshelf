@@ -11,6 +11,7 @@ RSpec.feature "Creating accounts" do
       click_on "Register"
 
       expect(page).to have_content "Account alice has been created."
+      expect(page).to have_css "div", text: "alice"
     end
   end
 

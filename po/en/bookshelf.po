@@ -17,6 +17,12 @@ msgstr ""
 "Plural-Forms: nplurals=; plural=;\n"
 "\n"
 
+msgid "Account %<identifier>s has been created."
+msgstr ""
+
+msgid "Could not create an account."
+msgstr ""
+
 msgid "Book created"
 msgstr ""
 
@@ -24,6 +30,27 @@ msgid "Could not create book"
 msgstr ""
 
 msgid "Server error occured"
+msgstr ""
+
+msgid "Signed in"
+msgstr ""
+
+msgid "Sign in failed"
+msgstr ""
+
+msgid "Signed out"
+msgstr ""
+
+msgid "ID:"
+msgstr ""
+
+msgid "Password:"
+msgstr ""
+
+msgid "Password (confirm):"
+msgstr ""
+
+msgid "Register"
 msgstr ""
 
 msgid "List"
@@ -41,8 +68,14 @@ msgstr ""
 msgid "Create"
 msgstr ""
 
+msgid "Sign out"
+msgstr ""
+
 msgid "Sign up"
 msgstr ""
 
 msgid "Sign in"
+msgstr ""
+
+msgid "Id:"
 msgstr ""

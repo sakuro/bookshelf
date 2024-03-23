@@ -20,7 +20,8 @@ module Bookshelf
           result = create_account.call(request.params[:account])
           case result
           in Success(account)
-            response.flash[:notice] = _("Account alice has been created.")
+            response.session[:account_id] = account.id
+            response.flash[:notice] = _("Account %<identifier>s has been created.") % {identifier: account.identifier}
             response.redirect_to routes.path(:show_account, identifier: account.identifier)
           in Failure(Dry::Validation::Result => result)
             response.flash.now[:alert] = _("Could not create an account.")
