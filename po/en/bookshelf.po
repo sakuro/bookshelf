@@ -68,6 +68,9 @@ msgstr ""
 msgid "Create"
 msgstr ""
 
+msgid "Logged in as: %<account>s"
+msgstr ""
+
 msgid "Sign out"
 msgstr ""
 

@@ -11,12 +11,12 @@
   </div>
   <div id="navbar-menu" class="navbar-menu">
     <div class="navbar-start">
-      <%= context.content_for("navbar-start") %>
+      <%= content_for("navbar-start") %>
     </div>
     <div class="navbar-end">
       <% if current_account? %>
         <div class="navbar-item">
-          <%= current_account %>
+          <%= _("Logged in as: %<account>s") % {account: current_account} %>
         </div>
         <%= link_to _("Sign out"), routes.path(:sign_out), class: "navbar-item is-tab" %>
       <% else %>

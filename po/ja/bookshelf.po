@@ -68,6 +68,9 @@ msgstr "著者"
 msgid "Create"
 msgstr "作成"
 
+msgid "Logged in as: %<account>s"
+msgstr "ログイン中: %<account>s"
+
 msgid "Sign out"
 msgstr "サインアウト"
 
