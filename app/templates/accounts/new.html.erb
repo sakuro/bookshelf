@@ -15,14 +15,14 @@
         <div class="field">
           <%= f.label _("Password:"), for: :password, class: "label" %>
           <div class="control">
-            <%= f.text_field :password, class: "input" %>
+            <%= f.password_field :password, class: "input" %>
           </div>
           <%= errors[:password] %>
         </div>
         <div class="field">
           <%= f.label _("Password (confirm):"), for: :password_confirmation, class: "label" %>
           <div class="control">
-            <%= f.text_field :password_confirmation, class: "input" %>
+            <%= f.password_field :password_confirmation, class: "input" %>
           </div>
           <%= errors[:password_confirmation] %>
         </div>

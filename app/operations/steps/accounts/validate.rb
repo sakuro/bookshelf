@@ -43,7 +43,7 @@ module Bookshelf
 
           def call(input)
             result = contract.call(input)
-            result.success? ? Success(input) : Failure(result.errors)
+            result.success? ? Success(input) : Failure(result)
           end
         end
       end

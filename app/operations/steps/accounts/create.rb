@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require "bcrypt"
+
 module Bookshelf
   module Operations
     module Steps

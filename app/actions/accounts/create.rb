@@ -22,9 +22,9 @@ module Bookshelf
           in Success(account)
             response.flash[:notice] = _("Account alice has been created.")
             response.redirect_to routes.path(:show_account, identifier: account.identifier)
-          in Failure(_)
-            halt 404
-            # error
+          in Failure(Dry::Validation::Result => result)
+            response.flash.now[:alert] = _("Could not create an account.")
+            response.render(view, result:)
           end
         end
       end
