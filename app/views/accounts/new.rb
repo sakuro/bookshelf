@@ -4,6 +4,9 @@ module Bookshelf
   module Views
     module Accounts
       class New < Bookshelf::View
+        expose(:errors) do |result: nil|
+          result.nil? ? [] : result.errors.to_a
+        end
       end
     end
   end

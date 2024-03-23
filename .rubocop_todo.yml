@@ -47,6 +47,7 @@ Style/ConstantVisibility:
 Style/Documentation:
   Exclude:
     - 'app/action.rb'
+    - 'app/actions/accounts/create.rb'
     - 'app/actions/accounts/new.rb'
     - 'app/actions/accounts/show.rb'
     - 'app/actions/books/create.rb'
@@ -57,11 +58,14 @@ Style/Documentation:
     - 'app/actions/sessions/create.rb'
     - 'app/actions/sessions/new.rb'
     - 'app/operation.rb'
+    - 'app/operations/accounts/create.rb'
     - 'app/operations/accounts/find_by_id.rb'
     - 'app/operations/books/create.rb'
     - 'app/operations/sessions/create.rb'
     - 'app/operations/step.rb'
+    - 'app/operations/steps/accounts/create.rb'
     - 'app/operations/steps/accounts/find_by_id.rb'
+    - 'app/operations/steps/accounts/validate.rb'
     - 'app/operations/steps/books/create.rb'
     - 'app/operations/steps/books/validate.rb'
     - 'app/operations/steps/sessions/authenticate.rb'
@@ -70,6 +74,7 @@ Style/Documentation:
     - 'app/repositories/book_repo.rb'
     - 'app/repositories/credential_repo.rb'
     - 'app/repository.rb'
+    - 'app/views/accounts/new.rb'
     - 'app/views/accounts/show.rb'
     - 'app/views/books/index.rb'
     - 'app/views/books/new.rb'
@@ -92,6 +97,7 @@ Style/Documentation:
 # Configuration parameters: RequireForNonPublicMethods.
 Style/DocumentationMethod:
   Exclude:
+    - 'app/actions/accounts/create.rb'
     - 'app/actions/accounts/new.rb'
     - 'app/actions/accounts/show.rb'
     - 'app/actions/books/create.rb'
@@ -102,7 +108,9 @@ Style/DocumentationMethod:
     - 'app/actions/sessions/create.rb'
     - 'app/actions/sessions/new.rb'
     - 'app/operations/step.rb'
+    - 'app/operations/steps/accounts/create.rb'
     - 'app/operations/steps/accounts/find_by_id.rb'
+    - 'app/operations/steps/accounts/validate.rb'
     - 'app/operations/steps/books/create.rb'
     - 'app/operations/steps/books/validate.rb'
     - 'app/operations/steps/sessions/authenticate.rb'

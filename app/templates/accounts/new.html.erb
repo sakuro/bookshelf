@@ -1,1 +1,37 @@
-<h1>Bookshelf::Views::Accounts::New</h1>
+<section class="section">
+  <h1 class="title is-1">Bookshelf::Views::Accounts::New</h1>
+  <h2 class="subtitle is-3">New account</h2>
+
+  <div class="columns">
+    <div class="column">
+      <%= form_for :account, routes.path(:create_account), class: "box" do |f| %>
+        <div class="field">
+          <%= f.label _("ID:"), for: :identifier, class: "label" %>
+          <div class="control">
+            <%= f.text_field :identifier, class: "input" %>
+          </div>
+          <%= errors[:identifier] %>
+        </div>
+        <div class="field">
+          <%= f.label _("Password:"), for: :password, class: "label" %>
+          <div class="control">
+            <%= f.text_field :password, class: "input" %>
+          </div>
+          <%= errors[:password] %>
+        </div>
+        <div class="field">
+          <%= f.label _("Password (confirm):"), for: :password_confirmation, class: "label" %>
+          <div class="control">
+            <%= f.text_field :password_confirmation, class: "input" %>
+          </div>
+          <%= errors[:password_confirmation] %>
+        </div>
+        <div class="field">
+          <div class="control">
+            <%= f.submit _("Register"), class: "button is-link"%>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>

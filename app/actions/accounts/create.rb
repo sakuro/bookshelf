@@ -1,0 +1,33 @@
+# frozen_string_literal: true
+
+module Bookshelf
+  module Actions
+    module Accounts
+      class Create < Bookshelf::Action
+        include Deps[create_account: "operations.accounts.create"]
+
+        params do
+          required(:account).hash do
+            required(:identifier)
+            required(:password)
+            required(:password_confirmation)
+          end
+        end
+
+        def handle(request, response)
+          halt 400 unless request.params.valid?
+
+          result = create_account.call(request.params[:account])
+          case result
+          in Success(account)
+            response.flash[:notice] = _("Account alice has been created.")
+            response.redirect_to routes.path(:show_account, identifier: account.identifier)
+          in Failure(_)
+            halt 404
+            # error
+          end
+        end
+      end
+    end
+  end
+end
