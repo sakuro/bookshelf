@@ -1,3 +1,11 @@
+PATH
+  remote: ../cerise-rubocop
+  specs:
+    cerise-rubocop (0.1.0)
+      hanami-cli (~> 2.1.0)
+      rubocop (~> 1.62)
+      zeitwerk (~> 2.6)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -373,6 +381,7 @@ DEPENDENCIES
   base64
   bcrypt (~> 3.1)
   capybara
+  cerise-rubocop!
   database_cleaner-sequel
   debug (~> 1.9)
   dotenv

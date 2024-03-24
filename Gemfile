@@ -59,3 +59,8 @@ group :test do
   gem "rack_session_access", "~> 0.2.0"
   gem "rom-factory", "~> 0.12.0"
 end
+
+group :cli do
+  gem "cerise-rubocop", path: "../cerise-rubocop"
+end
+
