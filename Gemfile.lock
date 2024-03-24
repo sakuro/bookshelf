@@ -1,7 +1,17 @@
-PATH
-  remote: ../cerise-rubocop
+GIT
+  remote: https://github.com/sakuro/cerise-gettext.git
+  revision: 416ee3a2716b31b7fd35e3c57679791f27a5d55d
+  specs:
+    cerise-gettext (0.1.0)
+      gettext (~> 3.4)
+      hanami-cli (~> 2.1.0)
+
+GIT
+  remote: https://github.com/sakuro/cerise-rubocop.git
+  revision: d3c814e371f359c12f1efa827d19be9ccdc2852e
   specs:
     cerise-rubocop (0.1.0)
+      dry-files (~> 1.1)
       hanami-cli (~> 2.1.0)
       rubocop (~> 1.62)
       zeitwerk (~> 2.6)
@@ -381,6 +391,7 @@ DEPENDENCIES
   base64
   bcrypt (~> 3.1)
   capybara
+  cerise-gettext!
   cerise-rubocop!
   database_cleaner-sequel
   debug (~> 1.9)
@@ -388,7 +399,6 @@ DEPENDENCIES
   dry-transaction (~> 0.16.0)
   dry-types (~> 1.0, >= 1.6.1)
   foreman (~> 0.87.2)
-  gettext (~> 3.4)
   guard-puma
   hanami (~> 2.1)
   hanami-assets (~> 2.1)
@@ -399,7 +409,6 @@ DEPENDENCIES
   hanami-validations (~> 2.1)
   hanami-view (~> 2.1)
   hanami-webconsole (~> 2.1)
-  locale (~> 2.1)
   pg (~> 1.5)
   puma
   rack-test

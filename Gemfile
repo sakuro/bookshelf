@@ -22,8 +22,8 @@ gem "base64"
 
 gem "bcrypt", "~> 3.1"
 gem "dry-transaction", "~> 0.16.0"
-gem "gettext", "~> 3.4"
-gem "locale", "~> 2.1"
+
+gem "cerise-gettext", github: "sakuro/cerise-gettext"
 
 group :development do
   gem "foreman", "~> 0.87.2"
@@ -61,6 +61,5 @@ group :test do
 end
 
 group :cli do
-  gem "cerise-rubocop", path: "../cerise-rubocop"
+  gem "cerise-rubocop", github: "sakuro/cerise-rubocop"
 end
-

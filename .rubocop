@@ -1,6 +1,3 @@
 --display-cop-names
 --display-style-guide
---exclude-limit=99999
 --extra-details
---no-auto-gen-timestamp
---no-offense-counts
