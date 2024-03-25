@@ -18,4 +18,8 @@ Hanami.app.register_provider :persistence, namespace: true do
     )
     register "rom", ROM.container(config)
   end
+
+  stop do
+    target["persistence.rom"].disconnect
+  end
 end
