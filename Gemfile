@@ -24,7 +24,8 @@ gem "bcrypt", "~> 3.1"
 gem "dry-transaction", "~> 0.16.0"
 
 group :cli, :development, :production, :test do
-  gem "cerise-gettext", github: "sakuro/cerise-gettext"
+  # gem "cerise-gettext", github: "sakuro/cerise-gettext"
+  gem "cerise-gettext", path: "../cerise-gettext"
 end
 
 group :development do
@@ -63,5 +64,5 @@ group :test do
 end
 
 group :cli do
-  gem "cerise-rubocop", github: "sakuro/cerise-rubocop"
+  gem "cerise-rubocop", path: "../cerise-rubocop"
 end
