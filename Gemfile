@@ -23,7 +23,9 @@ gem "base64"
 gem "bcrypt", "~> 3.1"
 gem "dry-transaction", "~> 0.16.0"
 
-gem "cerise-gettext", github: "sakuro/cerise-gettext"
+group :cli, :development, :production, :test do
+  gem "cerise-gettext", github: "sakuro/cerise-gettext"
+end
 
 group :development do
   gem "foreman", "~> 0.87.2"
