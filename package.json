@@ -3,11 +3,11 @@
   "private": true,
   "type": "module",
   "dependencies": {
-    "bulma": "^0.9.4",
     "hanami-assets": "^2.1.0",
     "solid-js": "^1.8.15"
   },
   "devDependencies": {
+    "bulma": "^1.0.0",
     "esbuild-plugin-solid": "^0.5.0",
     "esbuild-sass-plugin": "^3.2.0",
     "nord": "^0.2.1",
