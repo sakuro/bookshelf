@@ -3,11 +3,12 @@
   "private": true,
   "type": "module",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.5.1",
+    "bulma": "^1.0.0",
     "hanami-assets": "^2.1.0",
     "solid-js": "^1.8.15"
   },
   "devDependencies": {
-    "bulma": "^1.0.0",
     "esbuild-plugin-solid": "^0.5.0",
     "esbuild-sass-plugin": "^3.2.0",
     "sass-embedded": "^1.72.0"

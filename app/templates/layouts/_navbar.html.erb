@@ -18,10 +18,31 @@
         <div class="navbar-item">
           <%= _("Logged in as: %<account>s") % {account: current_account} %>
         </div>
-        <%= link_to _("Sign out"), routes.path(:sign_out), class: "navbar-item is-tab" %>
+        <%= link_to routes.path(:sign_out), class: "navbar-item is-tab" do %>
+          <span class="icon-text">
+            <span class="icon">
+              <i class="fas fa-arrow-right-from-bracket"></i>
+            </span>
+            <span><%= _("Sign out") %></span>
+          </span>
+        <% end %>
       <% else %>
-        <%= link_to _("Sign up"), routes.path(:sign_up), class: "navbar-item is-tab" %>
-        <%= link_to _("Sign in"), routes.path(:sign_in), class: "navbar-item is-tab" %>
+        <%= link_to routes.path(:sign_up), class: "navbar-item is-tab" do %>
+          <span class="icon-text">
+            <span class="icon">
+              <i class="fas fa-user-plus"></i>
+            </span>
+            <span><%= _("Sign up") %></span>
+          </span>
+        <% end %>
+        <%= link_to routes.path(:sign_in), class: "navbar-item is-tab" do %>
+          <span class="icon-text">
+            <span class="icon">
+              <i class="fas fa-arrow-right-to-bracket"></i>
+            </span>
+            <span><%= _("Sign in") %></span>
+          </span>
+        <% end %>
       <% end %>
     </div>
   </div>
