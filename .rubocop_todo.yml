@@ -12,11 +12,6 @@ Bundler/GemComment:
   Exclude:
     - 'Gemfile'
 
-# This cop supports safe autocorrection (--autocorrect).
-Layout/EmptyLines:
-  Exclude:
-    - 'lib/tasks/rubocop.rb'
-
 # Configuration parameters: AllowedMethods, AllowedPatterns, CountRepeatedAttributes.
 Metrics/AbcSize:
   Max: 26
@@ -94,7 +89,6 @@ Style/Documentation:
     - 'lib/bookshelf/persistence/relations/books.rb'
     - 'lib/bookshelf/persistence/relations/credentials.rb'
     - 'lib/bookshelf/types.rb'
-    - 'lib/tasks/rubocop.rb'
 
 # Configuration parameters: RequireForNonPublicMethods.
 Style/DocumentationMethod:
@@ -127,7 +121,6 @@ Style/DocumentationMethod:
     - 'app/views/parts/error.rb'
     - 'app/views/parts/errors.rb'
     - 'lib/bookshelf/persistence/relations/accounts.rb'
-    - 'lib/tasks/rubocop.rb'
 
 # This cop supports safe autocorrection (--autocorrect).
 # Configuration parameters: AutoCorrect, EnforcedStyle.
