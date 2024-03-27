@@ -6,6 +6,16 @@ PATH
       hanami-cli (~> 2.1.0)
 
 PATH
+  remote: ../cerise-persistence
+  specs:
+    cerise-persistence (0.1.0)
+      dry-system (~> 1.0)
+      hanami (~> 2.1)
+      rom (~> 5.3)
+      rom-repository (~> 5.3)
+      zeitwerk (~> 2.6)
+
+PATH
   remote: ../cerise-rubocop
   specs:
     cerise-rubocop (0.1.0)
@@ -390,6 +400,7 @@ DEPENDENCIES
   bcrypt (~> 3.1)
   capybara
   cerise-gettext!
+  cerise-persistence!
   cerise-rubocop!
   database_cleaner-sequel
   debug (~> 1.9)
