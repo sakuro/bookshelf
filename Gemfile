@@ -23,11 +23,11 @@ gem "base64"
 gem "bcrypt", "~> 3.1"
 gem "dry-transaction", "~> 0.16.0"
 
-gem "cerise-persistence", path: "../cerise-persistence"
-
 group :cli, :development, :production, :test do
   # gem "cerise-gettext", github: "sakuro/cerise-gettext"
   gem "cerise-gettext", path: "../cerise-gettext"
+  # gem "cerise-persistence", github: "sakuro/cerise-persistence"
+  gem "cerise-persistence", path: "../cerise-persistence"
 end
 
 group :development do
